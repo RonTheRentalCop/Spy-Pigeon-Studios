@@ -1,0 +1,161 @@
+<!doctype html>
+<!-- Nook. Copyright (c) 2026 GKoni. All rights reserved. Made by Spy Pigeon Studios. -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nook - a cosy little room for your desktop</title>
+    <meta name="description" content="Nook turns your Windows desktop into a cosy little room: a live wallpaper behind your icons, widgets that sit right on it, sticky notes, and your school calendar. Coming to Steam.">
+    <meta property="og:title" content="Nook - a cosy little room for your desktop">
+    <meta property="og:description" content="Live wallpapers, widgets, sticky notes and your school calendar, right on your Windows desktop. Coming to Steam.">
+    <meta property="og:image" content="https://spypigeonstudios.com/images/desk-halloween.jpg">
+    <meta property="og:url" content="https://spypigeonstudios.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#F6E7D5">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="images/icon-180.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top">
+        <a class="brand" href="#">
+            <img src="images/icon-64.png" alt="" width="32" height="32">
+            <span>Nook</span>
+        </a>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#seasons">Seasons</a>
+            <a href="#school">School</a>
+            <a href="#questions">Questions</a>
+        </nav>
+        <span class="studio">by Spy Pigeon Studios</span>
+    </header>
+
+    <section class="hero">
+        <canvas id="leaves" aria-hidden="true"></canvas>
+        <div class="hero-words">
+            <p class="script">make yourself at home</p>
+            <h1>Nook</h1>
+            <p class="lead">A cosy little room for your Windows desktop. A live wallpaper behind your icons, widgets that sit right on it, and sticky notes you can scribble on.</p>
+            <div class="actions">
+                <span class="badge">Coming to Steam in 2026</span>
+                <a class="button" href="#features">See what's inside</a>
+            </div>
+        </div>
+        <figure class="screen tilt-right">
+            <span class="tape"></span>
+            <img src="images/desk-halloween.jpg" alt="A Windows desktop with the Halloween night wallpaper, sticky notes, an Up next list, a clock and a calendar" width="1600" height="900">
+        </figure>
+    </section>
+
+    <section id="features" class="band">
+        <h2>Everything you need, nothing you don't</h2>
+        <p class="intro">Nook stays light and quiet in the background. Switch any part on or off, and change the colours, fonts and size of everything.</p>
+        <div class="cards">
+            <article class="card">
+                <h3>Live wallpaper</h3>
+                <p>Drifting leaves, rain, snow and fireflies play behind your desktop icons. Or use your own GIFs, videos, YouTube and TikTok links.</p>
+            </article>
+            <article class="card">
+                <h3>Widgets on your wallpaper</h3>
+                <p>A clock, calendar, checklist, focus timer, countdown, little notes and a record player that spins with whatever you are playing.</p>
+            </article>
+            <article class="card note-card">
+                <h3>Sticky notes</h3>
+                <p>As many as you like, in any colour. Click one on your desktop and start writing.</p>
+            </article>
+            <article class="card">
+                <h3>Arrange mode</h3>
+                <p>Widgets stay put so you never knock them by accident. When you want to move things, drag, turn, resize and group them.</p>
+            </article>
+            <article class="card">
+                <h3>The Workshop</h3>
+                <p>Build your own widgets and wallpapers right inside Nook, and share them with friends. Every widget runs in a safe sandbox.</p>
+            </article>
+            <article class="card">
+                <h3>Wobbly windows</h3>
+                <p>Flick a window across the screen and watch it wobble into place. Just for fun.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="seasons" class="band soft">
+        <h2>A scene for every season</h2>
+        <p class="intro">Hand-made scenes in Nook's warm colours, with something gently moving in each one.</p>
+        <div class="tabs" role="tablist">
+            <button class="tab on" data-scene="halloween" role="tab" aria-selected="true">Halloween night</button>
+            <button class="tab" data-scene="autumn" role="tab" aria-selected="false">Autumn hills</button>
+            <button class="tab" data-scene="snow" role="tab" aria-selected="false">Snowy cabin</button>
+            <button class="tab" data-scene="fireflies" role="tab" aria-selected="false">Firefly night</button>
+            <button class="tab" data-scene="lights" role="tab" aria-selected="false">Fairy lights</button>
+        </div>
+        <figure class="screen wide">
+            <img id="scene" src="images/desk-halloween.jpg" alt="The Halloween night scene with pumpkins, a big moon and little bats" width="1600" height="900">
+        </figure>
+        <p class="caption script" id="scene-caption">Pumpkins, a big moon and little bats</p>
+    </section>
+
+    <section id="school" class="band split">
+        <div>
+            <h2>Your school calendar, on your desktop</h2>
+            <p>Connect Canvas, Google Classroom, Google Calendar, Outlook or Apple Calendar. Due dates show up on the calendar and in the Up next widget, so you can see what is coming without opening a single tab.</p>
+            <ul class="ticks">
+                <li>Paste one private link, no sign-in needed</li>
+                <li>Checks for new homework every 30 minutes</li>
+                <li>Nook only reads your calendar, it never changes it</li>
+                <li>Your links stay on your PC</li>
+            </ul>
+        </div>
+        <figure class="screen tilt-left">
+            <span class="tape"></span>
+            <img src="images/app-sync.jpg" alt="The Calendar sync page in the Nook window" width="1143" height="742" loading="lazy">
+        </figure>
+    </section>
+
+    <section class="band soft split flip">
+        <figure class="screen tilt-right">
+            <span class="tape"></span>
+            <img src="images/app-notes.jpg" alt="The Nook window with a blue sticky note being edited" width="1143" height="742" loading="lazy">
+        </figure>
+        <div>
+            <h2>Make it yours</h2>
+            <p>Every widget has its own card colour, corners, font, size and rotation. Save the whole look as a setup and switch between them, like a cosy study corner for school days and a quiet one for weekends.</p>
+            <p>A short welcome tour sets everything up the first time you open Nook.</p>
+        </div>
+    </section>
+
+    <section id="questions" class="band">
+        <h2>Questions</h2>
+        <div class="faq">
+            <details>
+                <summary>When can I get Nook?</summary>
+                <p>Nook is coming to Steam in 2026. It is being tested by a small group right now.</p>
+            </details>
+            <details>
+                <summary>How much will it cost?</summary>
+                <p>Nook will be a paid app on Steam. The price will be shared closer to launch.</p>
+            </details>
+            <details>
+                <summary>Which computers does it work on?</summary>
+                <p>Windows 10 and Windows 11.</p>
+            </details>
+            <details>
+                <summary>Will it slow my computer down?</summary>
+                <p>Nook is built to stay light. It can also pause the wallpaper while a game or full-screen app is open.</p>
+            </details>
+            <details>
+                <summary>Are Workshop widgets safe?</summary>
+                <p>Yes. Workshop widgets run in a locked sandbox, so they cannot reach your files or the rest of your computer.</p>
+            </details>
+        </div>
+    </section>
+
+    <footer>
+        <p class="script">thanks for stopping by</p>
+        <p>Nook &copy; 2026 GKoni. All rights reserved. Made by Spy Pigeon Studios.</p>
+        <p class="small">Steam is a trademark of Valve Corporation. Fonts: Kalam, Patrick Hand and Caveat, under the SIL Open Font License.</p>
+    </footer>
+
+    <script src="site.js"></script>
+</body>
+</html>

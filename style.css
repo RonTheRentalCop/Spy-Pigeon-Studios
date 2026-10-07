@@ -239,6 +239,18 @@ footer .small { color: var(--shadow); opacity: 0.75; }
 .viewer figcaption { font-size: 20px; padding: 10px 6px 0; text-align: center; }
 .viewer .close { position: absolute; top: -18px; right: -18px; width: 42px; height: 42px; border-radius: 50%; border: 0; background: var(--pink); color: var(--deep-brown); font-size: 28px; line-height: 1; cursor: pointer; box-shadow: var(--lift); }
 
+/* Privacy and legal pages */
+.doc { max-width: 820px; margin: 0 auto; }
+.doc h1 { font-size: clamp(48px, 7vw, 76px); color: #7A6A45; margin: 4px 0 6px; }
+.doc h2, .band.doc > h2 { font-size: clamp(28px, 3.4vw, 34px); margin: 40px 0 10px; text-align: left; }
+.doc h3 { font-size: 23px; margin: 24px 0 6px; }
+.doc p, .doc li { margin: 0 0 12px; }
+.doc ul { padding-left: 24px; margin: 0 0 12px; }
+.doc li::marker { color: var(--pink-shadow); }
+.doc code { font-size: 0.85em; background: var(--light-cream); border: 1px solid var(--shadow); border-radius: 6px; padding: 1px 6px; overflow-wrap: anywhere; }
+.updated { color: var(--muted); }
+footer a { color: var(--pink); }
+
 @media (max-width: 860px) {
     .hero, .split { grid-template-columns: minmax(0, 1fr); }
     .split.flip > figure { order: 2; }

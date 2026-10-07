@@ -57,6 +57,22 @@ a { color: var(--pink-shadow); }
 .top nav a { color: var(--dark-patch); text-decoration: none; }
 .top nav a:hover { color: var(--pink-shadow); }
 .studio { color: var(--muted); font-size: 17px; }
+.discord {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border-radius: 40px;
+    background: var(--pink);
+    color: var(--deep-brown);
+    font-size: 18px;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(208, 127, 133, 0.3);
+    transition: transform 0.2s ease;
+}
+.discord:hover { transform: translateY(-1px); }
+.discord:focus-visible { outline: 3px solid var(--pink-shadow); outline-offset: 3px; }
 
 .hero {
     position: relative;
@@ -227,11 +243,12 @@ footer .small { color: var(--shadow); opacity: 0.75; }
     .hero, .split { grid-template-columns: minmax(0, 1fr); }
     .split.flip > figure { order: 2; }
     .top nav, .studio { display: none; }
+    .discord { margin-left: auto; font-size: 16px; padding: 6px 14px; }
     .lead { max-width: none; }
     .viewer .close { top: 8px; right: 8px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .button, .polaroid { transition: none; }
+    .button, .polaroid, .discord { transition: none; }
 }

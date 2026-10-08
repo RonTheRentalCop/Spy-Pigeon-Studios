@@ -12,7 +12,7 @@ function credit(photo) {
 
 function open(photo) {
     viewerImg.src = photo.file;
-    viewerImg.alt = photo.alt || photo.caption || "A desktop set up with Nook";
+    viewerImg.alt = photo.alt || photo.caption || "A desktop set up with Suede";
     viewerCaption.textContent = [photo.caption, credit(photo)].filter(Boolean).join(" · ");
     viewer.showModal();
 }
@@ -27,7 +27,7 @@ function pin(photo, index) {
     tape.className = "tape";
     const img = document.createElement("img");
     img.src = photo.file;
-    img.alt = photo.alt || photo.caption || "A desktop set up with Nook";
+    img.alt = photo.alt || photo.caption || "A desktop set up with Suede";
     img.loading = "lazy";
     card.append(tape, img);
 

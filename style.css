@@ -251,6 +251,44 @@ footer .small { color: var(--shadow); opacity: 0.75; }
 .updated { color: var(--muted); }
 footer a { color: var(--pink); }
 
+/* Download */
+.download > h2, .download > .intro, .download > .script { text-align: center; }
+.download > .script { margin-bottom: 4px; }
+.agree-box { max-width: 760px; margin: 0 auto 26px; padding: 18px 22px; background: var(--cream); border: 1px solid var(--shadow); border-radius: 18px; }
+.agree { display: flex; gap: 14px; align-items: flex-start; cursor: pointer; }
+.agree input { flex: none; width: 24px; height: 24px; margin-top: 3px; accent-color: var(--pink-shadow); cursor: pointer; }
+.downloads { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); gap: 18px; max-width: 960px; margin: 0 auto; }
+.get {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 18px 22px;
+    border-radius: 22px;
+    background: var(--light-cream);
+    border: 1px solid var(--shadow);
+    color: var(--dark-patch);
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(44, 33, 28, 0.08);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.get.mine { background: var(--pink); border-color: var(--pink); color: var(--deep-brown); box-shadow: 0 8px 20px rgba(208, 127, 133, 0.35); }
+.get:hover { transform: translateY(-2px); }
+.get-name { font-family: "Kalam", cursive; font-size: 25px; line-height: 1.2; }
+.get-detail { font-size: 16px; opacity: 0.85; }
+.downloads[aria-disabled="true"] .get { opacity: 0.45; cursor: not-allowed; transform: none; }
+.tick-first { text-align: center; color: var(--pink-shadow); margin: 14px 0 0; }
+.tick-first.nudge { animation: nudge 0.4s ease; }
+@keyframes nudge { 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+.install-help { max-width: 760px; margin: 34px auto 0; }
+.install-help ol { margin: 10px 0 4px; padding-left: 24px; }
+.install-help li { margin-bottom: 6px; }
+.fine-print { color: var(--muted); margin-top: 22px; }
+.actions .badge { text-decoration: none; }
+
+@media (max-width: 1180px) {
+    .studio { display: none; }
+}
+
 @media (max-width: 860px) {
     .hero, .split { grid-template-columns: minmax(0, 1fr); }
     .split.flip > figure { order: 2; }
@@ -262,7 +300,8 @@ footer a { color: var(--pink); }
 
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .button, .polaroid, .discord { transition: none; }
+    .button, .polaroid, .discord, .get { transition: none; }
+    .tick-first.nudge { animation: none; }
 }
 
 .offer {

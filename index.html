@@ -23,6 +23,7 @@
             <span>Suede</span>
         </a>
         <nav>
+            <a href="#download">Download</a>
             <a href="#features">Features</a>
             <a href="#seasons">Seasons</a>
             <a href="#school">School</a>
@@ -40,12 +41,12 @@
         <div class="offer-words">
             <p class="script">for a limited time</p>
             <h2>Suede is free until 6 November</h2>
-            <p>Join the Spy Pigeon Studios Discord to get your free copy. Once the offer ends, Suede is coming to Steam as a paid app.</p>
+            <p>Download the public beta below, free for your own use. Once the offer ends, Suede is coming to Steam as a paid app. Come say hi on our <a href="https://discord.gg/Z22ZAXCTtA" target="_blank" rel="noopener">Discord</a>.</p>
         </div>
         <div class="offer-action">
-            <a class="offer-button" href="https://discord.gg/Z22ZAXCTtA" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M20.3 4.4A19.6 19.6 0 0 0 15.4 3l-.6 1.3a18.3 18.3 0 0 0-5.6 0L8.6 3a19.5 19.5 0 0 0-4.9 1.4C.6 9-.3 13.5.1 18a19.8 19.8 0 0 0 6 3l1.3-2.1c-.7-.3-1.4-.6-2-1l.5-.4a14 14 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2.1a19.7 19.7 0 0 0 6-3c.5-5.2-.8-9.7-3.6-13.6ZM8 15.3c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>
-                <span>Join the Discord to get Suede</span>
+            <a class="offer-button" href="#download">
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.4l3.3 3.3V4a1 1 0 0 1 1-1ZM5 19a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"/></svg>
+                <span>Download Suede free</span>
             </a>
             <span class="offer-left" data-left>Free until 6 November 2026</span>
         </div>
@@ -58,14 +59,65 @@
             <h1>Suede</h1>
             <p class="lead">A cosy little room for your Windows desktop. A live wallpaper behind your icons, widgets that sit right on it, and sticky notes you can scribble on.</p>
             <div class="actions">
-                <span class="badge">Coming to Steam in 2026</span>
-                <a class="button" href="#features">See what's inside</a>
+                <a class="button" href="#download">Download the free beta</a>
+                <a class="badge" href="#features">See what's inside</a>
             </div>
         </div>
         <figure class="screen tilt-right">
             <span class="tape"></span>
             <img src="images/desk-halloween.jpg" alt="A Windows desktop with the Halloween night wallpaper, sticky notes, an Up next list, a clock and a calendar" width="1600" height="900">
         </figure>
+    </section>
+
+    <section id="download" class="band soft download">
+        <p class="script">free public beta</p>
+        <h2>Download Suede</h2>
+        <p class="intro">Version 0.2.0 beta. Free until 6 November 2026, for your own personal use.</p>
+
+        <div class="agree-box">
+            <label class="agree">
+                <input type="checkbox" id="agree">
+                <span>I agree to the <a href="legal.html#beta-licence">Suede Beta Licence</a>: Suede is for my own personal, non-commercial use, and I won't share, upload or pass on my copy. Anyone else who wants Suede downloads their own from this site.</span>
+            </label>
+        </div>
+
+        <div class="downloads" id="downloads" aria-disabled="true">
+            <a class="get" data-os="windows" aria-label="Download for Windows" href="https://github.com/RonTheRentalCop/Spy-Pigeon-Studios/releases/download/v0.2.0-beta/Suede-0.2.0-windows-x64.zip" download>
+                <span class="get-name">Download for Windows</span>
+                <span class="get-detail">Windows 10 and 11, 64-bit · <span data-size="windows">94 MB zip</span></span>
+            </a>
+            <a class="get" data-os="mac-arm" aria-label="Download for Mac (Apple Silicon)" href="https://github.com/RonTheRentalCop/Spy-Pigeon-Studios/releases/download/v0.2.0-beta/Suede-0.2.0-mac-apple-silicon.dmg" download>
+                <span class="get-name">Download for Mac</span>
+                <span class="get-detail">Apple Silicon (M1 and newer) · <span data-size="mac-arm">85 MB dmg</span></span>
+            </a>
+            <a class="get" data-os="mac-intel" aria-label="Download for Mac (Intel)" href="https://github.com/RonTheRentalCop/Spy-Pigeon-Studios/releases/download/v0.2.0-beta/Suede-0.2.0-mac-intel.dmg" download>
+                <span class="get-name">Download for Mac</span>
+                <span class="get-detail">Intel Macs · <span data-size="mac-intel">86 MB dmg</span></span>
+            </a>
+        </div>
+        <p class="tick-first" id="tick-first">Tick the box above to download.</p>
+
+        <div class="install-help">
+            <details>
+                <summary>Installing on Windows</summary>
+                <ol>
+                    <li>Unzip the whole Suede folder somewhere you like, such as Documents, and keep everything in it together.</li>
+                    <li>Double-click <strong>Suede.exe</strong>.</li>
+                    <li>Windows may say "Windows protected your PC" because the beta isn't signed yet. Click <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
+                    <li>Suede lives in the system tray as a little pink paw. Right-click it to open Suede or quit.</li>
+                </ol>
+            </details>
+            <details>
+                <summary>Installing on a Mac</summary>
+                <ol>
+                    <li>Not sure which Mac you have? Open the Apple menu, choose <strong>About This Mac</strong>, and look at <strong>Chip</strong>. "Apple M…" means Apple Silicon. "Intel" means Intel.</li>
+                    <li>Open the downloaded file and drag <strong>Suede</strong> into <strong>Applications</strong>.</li>
+                    <li>The first time, macOS may say it can't check Suede because the beta isn't notarised yet. Open <strong>System Settings</strong>, then <strong>Privacy &amp; Security</strong>, scroll down and click <strong>Open Anyway</strong> next to Suede.</li>
+                    <li>Suede lives in the menu bar as a little pink paw.</li>
+                </ol>
+            </details>
+        </div>
+        <p class="small center fine-print">Only download Suede from spypigeonstudios.com. Copies from anywhere else aren't official and may have been tampered with.</p>
     </section>
 
     <section id="features" class="band">
@@ -155,15 +207,15 @@
         <div class="faq">
             <details>
                 <summary>When can I get Suede?</summary>
-                <p>Right now. Suede is free until 6 November 2026 for everyone who joins our <a href="https://discord.gg/Z22ZAXCTtA" target="_blank" rel="noopener">Discord</a>. After that, it is coming to Steam.</p>
+                <p>Right now. The public beta is free to <a href="#download">download</a> until 6 November 2026. After that, Suede is coming to Steam.</p>
             </details>
             <details>
                 <summary>How much will it cost?</summary>
-                <p>Nothing until 6 November 2026, if you join our Discord. After that, Suede will be a paid app on Steam, and the price will be shared closer to launch.</p>
+                <p>Nothing until 6 November 2026. After that, Suede will be a paid app on Steam, and the price will be shared closer to launch.</p>
             </details>
             <details>
                 <summary>Which computers does it work on?</summary>
-                <p>Windows 10 and Windows 11, Mac OS Intel and Silicon. Linux Coming Soon.</p>
+                <p>Windows 10 and Windows 11 (64-bit), and Macs with Apple Silicon or Intel chips. Linux is coming soon.</p>
             </details>
             <details>
                 <summary>Will it slow my computer down?</summary>
@@ -185,6 +237,7 @@
 
     <script src="site.js"></script>
     <script src="banner.js"></script>
+    <script src="download.js"></script>
     <script src="analytics.js"></script>
 </body>
 </html>

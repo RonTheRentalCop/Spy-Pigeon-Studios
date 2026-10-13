@@ -285,6 +285,38 @@ footer a { color: var(--pink); }
 .fine-print { color: var(--muted); margin-top: 22px; }
 .actions .badge { text-decoration: none; }
 
+/* Socials */
+.socials { display: flex; gap: 6px; }
+.social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: var(--dark-patch);
+    background: rgba(255, 249, 240, 0.7);
+    border: 1px solid var(--shadow);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+.social:hover { background: var(--pink); border-color: var(--pink); color: var(--deep-brown); transform: translateY(-1px); }
+.social:focus-visible, .follow a:focus-visible { outline: 3px solid var(--pink-shadow); outline-offset: 3px; }
+.follow-title { font-family: "Kalam", cursive; font-size: 22px; margin: 14px 0 8px; }
+.follow { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 0; margin: 0 0 22px; }
+.follow a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 40px;
+    color: var(--cream);
+    text-decoration: none;
+    border: 1px solid rgba(246, 231, 213, 0.35);
+    transition: background 0.2s ease;
+}
+.follow a:hover { background: rgba(233, 160, 163, 0.25); }
+.follow .handle { opacity: 0.7; font-size: 0.9em; }
+
 @media (max-width: 1180px) {
     .studio { display: none; }
 }
@@ -292,7 +324,7 @@ footer a { color: var(--pink); }
 @media (max-width: 860px) {
     .hero, .split { grid-template-columns: minmax(0, 1fr); }
     .split.flip > figure { order: 2; }
-    .top nav, .studio { display: none; }
+    .top nav, .studio, .socials { display: none; }
     .discord { margin-left: auto; font-size: 16px; padding: 6px 14px; }
     .lead { max-width: none; }
     .viewer .close { top: 8px; right: 8px; }
@@ -300,7 +332,7 @@ footer a { color: var(--pink); }
 
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .button, .polaroid, .discord, .get { transition: none; }
+    .button, .polaroid, .discord, .get, .social, .follow a { transition: none; }
     .tick-first.nudge { animation: none; }
 }
 

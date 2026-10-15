@@ -324,9 +324,7 @@ footer a { color: var(--pink); }
     display: flex;
     align-items: center;
     padding: clamp(48px, 7vw, 100px) clamp(16px, 5vw, 72px);
-    display: grid;
-    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
-    gap: clamp(28px, 5vw, 72px);
+    justify-content: center;
     background: radial-gradient(ellipse at 80% 30%, rgba(255, 196, 107, 0.35), transparent 60%), linear-gradient(160deg, #5B3A22 0%, #3A2618 55%, #261A12 100%);
     color: #FFF3DF;
 }
@@ -382,6 +380,11 @@ footer a { color: var(--pink); }
 }
 .tt-events { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 10px; }
 .tt-events article { border-top: 6px solid #E07A2B; }
+.tt-hero-inner { width: 100%; max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+.tt-section > h2, .tt-sub { text-align: center; }
+.tt-about { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; max-width: 900px; margin: 0 auto; }
+.tt-about-words { max-width: 700px; }
+.tt-steps, .tt-events { max-width: 1024px; margin-left: auto; margin-right: auto; }
 .tt-team { text-align: center; max-width: 760px; margin: 0 auto; }
 .tt-punch { font-family: "Kalam", cursive; font-size: clamp(26px, 3vw, 34px); color: #9E4E14; margin-top: 10px; }
 .tt-support { text-align: center; }
@@ -396,7 +399,7 @@ footer a { color: var(--pink); }
 .top nav a { white-space: nowrap; }
 
 @media (max-width: 860px) {
-    .hero, .split, .next-project, .tt-hero, .tt-about { grid-template-columns: minmax(0, 1fr); }
+    .hero, .split, .next-project, .tt-hero-inner, .tt-about { grid-template-columns: minmax(0, 1fr); }
     .tt-steps, .tt-events { grid-template-columns: minmax(0, 1fr); }
     .split.flip > figure { order: 2; }
     .top nav, .studio, .socials { display: none; }

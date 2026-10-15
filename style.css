@@ -317,12 +317,61 @@ footer a { color: var(--pink); }
 .follow a:hover { background: rgba(233, 160, 163, 0.25); }
 .follow .handle { opacity: 0.7; font-size: 0.9em; }
 
-@media (max-width: 1180px) {
-    .studio { display: none; }
+/* Tiny Towing */
+.tt-hero {
+    position: relative;
+    min-height: min(82vh, 760px);
+    display: flex;
+    align-items: center;
+    padding: clamp(48px, 7vw, 100px) clamp(16px, 5vw, 72px);
+    display: grid;
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+    gap: clamp(28px, 5vw, 72px);
+    background: radial-gradient(ellipse at 80% 30%, rgba(255, 196, 107, 0.35), transparent 60%), linear-gradient(160deg, #5B3A22 0%, #3A2618 55%, #261A12 100%);
+    color: #FFF3DF;
 }
+.tt-hero-words { max-width: 640px; }
+.tt-hero-shot { transform: rotate(2deg); background: #FFF3DF; }
+.tt-hero-shot img { border-radius: 10px; }
+.tt-kicker { font-family: "Caveat", cursive; font-weight: 700; font-size: 28px; color: #FFC46B; margin: 0; }
+.tt-title { font-family: "Kalam", cursive; font-weight: 700; font-size: clamp(72px, 11vw, 140px); line-height: 0.95; color: #FFF3DF; text-shadow: 0 4px 0 rgba(38, 26, 18, 0.6); margin: 6px 0 18px; }
+.tt-lead { font-size: clamp(20px, 2vw, 25px); margin: 0 0 28px; }
+.tt-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.tt-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 26px;
+    border-radius: 14px;
+    background: #E07A2B;
+    border: 2px solid #9E4E14;
+    color: #FFF3DF;
+    font-size: 21px;
+    text-decoration: none;
+    box-shadow: 0 5px 0 #9E4E14;
+    transition: transform 0.2s ease;
+}
+.tt-button:hover { transform: translateY(-2px); }
+.tt-button.ghost { background: #2F6B4A; border-color: #1C4430; box-shadow: 0 5px 0 #1C4430; }
+.tt-button:focus-visible { outline: 3px solid #FFC46B; outline-offset: 3px; }
+.tt-facts { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0 0; }
+.tt-facts span { padding: 4px 14px; border-radius: 40px; background: rgba(255, 243, 223, 0.15); border: 1px solid rgba(255, 243, 223, 0.35); font-size: 17px; }
+.tt-events { list-style: none; max-width: 820px; margin: 0 auto; padding: 0; display: grid; gap: 16px; }
+.tt-events li { background: var(--light-cream); border: 1px solid var(--shadow); border-left: 6px solid #E07A2B; border-radius: 16px; padding: 18px 22px; }
+.tt-tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 22px; max-width: 820px; margin: 0 auto; }
+.tt-tier { background: var(--light-cream); border: 1px solid var(--shadow); border-radius: 22px; padding: 22px 26px; box-shadow: 0 6px 18px rgba(44, 33, 28, 0.08); }
+.tt-tier.best { border: 2px solid #E07A2B; }
+.tt-tier ul { margin: 8px 0 0; padding-left: 22px; }
+.tt-price { font-family: "Kalam", cursive; font-size: 32px; margin: 0; color: #9E4E14; }
+.tt-soon { color: var(--muted); margin: 26px 0 16px; }
+.next-project { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+
+@media (max-width: 1180px) {
+    .studio, .socials { display: none; }
+}
+.top nav a { white-space: nowrap; }
 
 @media (max-width: 860px) {
-    .hero, .split { grid-template-columns: minmax(0, 1fr); }
+    .hero, .split, .next-project, .tt-hero { grid-template-columns: minmax(0, 1fr); }
     .split.flip > figure { order: 2; }
     .top nav, .studio, .socials { display: none; }
     .discord { margin-left: auto; font-size: 16px; padding: 6px 14px; }
@@ -332,7 +381,7 @@ footer a { color: var(--pink); }
 
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .button, .polaroid, .discord, .get, .social, .follow a { transition: none; }
+    .button, .polaroid, .discord, .get, .social, .follow a, .tt-button { transition: none; }
     .tick-first.nudge { animation: none; }
 }
 

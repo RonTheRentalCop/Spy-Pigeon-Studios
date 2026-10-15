@@ -1,4 +1,4 @@
-// The download buttons only work once the Beta Licence box is ticked, and the button for the
+// The download buttons only work once the Download Licence box is ticked, and the button for the
 // visitor's own computer is highlighted.
 const agree = document.getElementById("agree");
 const downloads = document.getElementById("downloads");

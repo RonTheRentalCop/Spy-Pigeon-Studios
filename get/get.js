@@ -1,38 +1,17 @@
-// Works out which computer the visitor is on and shows just that download button.
+// Works out which computer the visitor is on and starts that download straight away.
 // Every button stays visible if anything here fails, so nobody is left without a download.
-const agree = document.getElementById("agree");
 const downloads = document.getElementById("downloads");
-const tickFirst = document.getElementById("tick-first");
 const found = document.getElementById("found");
 const switcher = document.getElementById("switch");
 const intel = document.getElementById("intel");
 const others = document.getElementById("others");
 const buttons = [...downloads.querySelectorAll(".get")];
 
+const NAMES = { windows: "Windows", "mac-arm": "your Mac with Apple Silicon", "mac-intel": "your Intel Mac" };
 const MESSAGES = {
-    windows: "Looks like you're on Windows. Here's Suede 1.0.2 for your PC.",
-    "mac-arm": "Looks like you're on a Mac with Apple Silicon. Here's Suede 1.0.2 for it.",
-    "mac-intel": "Looks like you're on an Intel Mac. Here's Suede 1.0.2 for it.",
     mobile: "Suede is for Windows and Mac computers. Open spypigeonstudios.com/get on your computer, or pick a version below.",
     other: "Suede runs on Windows and Mac. Pick the version for your computer below.",
 };
-
-function refresh() {
-    downloads.setAttribute("aria-disabled", String(!agree.checked));
-    buttons.forEach((link) => link.setAttribute("tabindex", agree.checked ? "0" : "-1"));
-    tickFirst.hidden = agree.checked;
-}
-
-downloads.addEventListener("click", (event) => {
-    if (agree.checked || !event.target.closest(".get")) return;
-    event.preventDefault();
-    tickFirst.classList.remove("nudge");
-    void tickFirst.offsetWidth;
-    tickFirst.classList.add("nudge");
-    agree.focus();
-});
-agree.addEventListener("change", refresh);
-refresh();
 
 function graphicsChip() {
     try {
@@ -72,29 +51,42 @@ async function detect() {
     return "other";
 }
 
-function show(kind) {
-    found.textContent = MESSAGES[kind];
-    const single = kind === "windows" || kind.startsWith("mac");
-    downloads.classList.toggle("single", single);
-    buttons.forEach((link) => {
-        const mine = link.dataset.os === kind;
-        link.hidden = single && !mine;
-        link.classList.toggle("mine", mine);
-    });
+function showHelp(kind) {
     document.querySelectorAll(".install-help details").forEach((help) => {
-        help.hidden = single && help.dataset.for !== (kind === "windows" ? "windows" : "mac");
+        help.hidden = Boolean(kind) && help.dataset.for !== (kind === "windows" ? "windows" : "mac");
+        help.open = !help.hidden && Boolean(kind);
     });
-    switcher.hidden = !single;
-    intel.hidden = kind !== "mac-arm";
 }
 
-intel.addEventListener("click", () => show("mac-intel"));
-others.addEventListener("click", () => {
-    buttons.forEach((link) => { link.hidden = false; });
-    downloads.classList.remove("single");
-    document.querySelectorAll(".install-help details").forEach((help) => { help.hidden = false; });
-    switcher.hidden = true;
-    found.textContent = "Here are all the versions of Suede 1.0.2.";
-});
+function start(kind) {
+    const link = buttons.find((button) => button.dataset.os === kind);
+    found.textContent = `Your download of Suede 1.0.2 for ${NAMES[kind]} is starting. Check your Downloads folder.`;
+    downloads.classList.add("single");
+    buttons.forEach((button) => {
+        button.hidden = button !== link;
+        button.classList.toggle("mine", button === link);
+    });
+    link.querySelector(".get-name").textContent = "Download again";
+    showHelp(kind);
+    switcher.hidden = false;
+    intel.hidden = kind !== "mac-arm";
+    setTimeout(() => { window.location.href = link.href; }, 700);
+}
 
-detect().then(show).catch(() => show("other"));
+function showAll(message) {
+    found.textContent = message;
+    downloads.classList.remove("single");
+    buttons.forEach((button) => {
+        button.hidden = false;
+        button.classList.remove("mine");
+    });
+    showHelp(null);
+    switcher.hidden = true;
+}
+
+intel.addEventListener("click", () => start("mac-intel"));
+others.addEventListener("click", () => showAll("Here are all the versions of Suede 1.0.2."));
+
+detect()
+    .then((kind) => (NAMES[kind] ? start(kind) : showAll(MESSAGES[kind])))
+    .catch(() => showAll(MESSAGES.other));

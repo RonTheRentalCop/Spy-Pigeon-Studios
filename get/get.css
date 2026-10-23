@@ -21,3 +21,5 @@
 }
 .switch button:hover { border-color: var(--pink-shadow); color: var(--pink-shadow); }
 .switch button:focus-visible { outline: 3px solid var(--pink-shadow); outline-offset: 2px; }
+
+.licence-note { max-width: 62ch; margin: 18px auto 0; text-align: center; font-size: 15px; color: var(--muted); }

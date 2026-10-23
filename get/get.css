@@ -1,0 +1,23 @@
+.get-page [hidden] { display: none !important; }
+
+.get-page main { min-height: 60vh; }
+.get-page main > h1 { font-size: clamp(48px, 8vw, 84px); text-align: center; margin: 0 0 6px; }
+.get-page main > .script, .get-page main > .intro { text-align: center; }
+.get-page main > .intro { max-width: 46ch; margin: 10px auto 28px; color: var(--dark-patch); }
+
+.get-page .downloads.single { max-width: 420px; grid-template-columns: 1fr; }
+.get-page .downloads .get.mine { text-align: center; }
+
+.switch { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 18px 0 0; }
+.switch button {
+    font: inherit;
+    font-size: 18px;
+    padding: 6px 16px;
+    border-radius: 40px;
+    border: 1px solid var(--shadow);
+    background: var(--cream);
+    color: var(--dark-patch);
+    cursor: pointer;
+}
+.switch button:hover { border-color: var(--pink-shadow); color: var(--pink-shadow); }
+.switch button:focus-visible { outline: 3px solid var(--pink-shadow); outline-offset: 2px; }

@@ -1,0 +1,94 @@
+<!doctype html>
+<!-- Suede. Copyright (c) 2026 GKoni. All rights reserved. Made by Spy Pigeon Studios. -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Get Suede</title>
+    <meta name="description" content="Download Suede for your computer: Windows, or Mac with Apple Silicon or Intel.">
+    <meta property="og:title" content="Get Suede">
+    <meta property="og:description" content="Download Suede for your Windows PC or Mac.">
+    <meta property="og:image" content="https://spypigeonstudios.com/images/desk-halloween.jpg">
+    <meta property="og:url" content="https://spypigeonstudios.com/get/">
+    <meta name="theme-color" content="#F6E7D5">
+    <link rel="canonical" href="https://spypigeonstudios.com/get/">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../images/icon-180.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="get.css">
+</head>
+<body class="get-page">
+    <header class="top">
+        <a class="brand" href="../">
+            <img src="../images/icon-64.png" alt="" width="32" height="32">
+            <span>Suede</span>
+        </a>
+        <span class="studio">by Spy Pigeon Studios</span>
+    </header>
+
+    <main class="band soft download">
+        <p class="script">make yourself at home</p>
+        <h1>Get Suede</h1>
+        <p class="intro" id="found">Version 1.0.2, for your own personal use.</p>
+
+        <div class="agree-box">
+            <label class="agree">
+                <input type="checkbox" id="agree">
+                <span>I agree to the <a href="../legal.html#download-licence">Suede Download Licence</a>: Suede is for my own personal, non-commercial use, and I won't share, upload or pass on my copy. Anyone else who wants Suede downloads their own from this site.</span>
+            </label>
+        </div>
+
+        <div class="downloads" id="downloads" aria-disabled="true">
+            <a class="get" data-os="windows" aria-label="Download for Windows" href="https://github.com/RonTheRentalCop/Spy-Pigeon-Studios/releases/download/v1.0.2/Suede-1.0.2-windows-x64.zip" download>
+                <span class="get-name">Download for Windows</span>
+                <span class="get-detail">Windows 10 and 11, 64-bit · 94 MB zip</span>
+            </a>
+            <a class="get" data-os="mac-arm" aria-label="Download for Mac (Apple Silicon)" href="https://github.com/RonTheRentalCop/Spy-Pigeon-Studios/releases/download/v1.0.2/Suede-1.0.2-mac-apple-silicon.dmg" download>
+                <span class="get-name">Download for Mac</span>
+                <span class="get-detail">Apple Silicon (M1 and newer) · 84 MB dmg</span>
+            </a>
+            <a class="get" data-os="mac-intel" aria-label="Download for Mac (Intel)" href="https://github.com/RonTheRentalCop/Spy-Pigeon-Studios/releases/download/v1.0.2/Suede-1.0.2-mac-intel.dmg" download>
+                <span class="get-name">Download for Mac</span>
+                <span class="get-detail">Intel Macs · 86 MB dmg</span>
+            </a>
+        </div>
+        <p class="tick-first" id="tick-first">Tick the box above to download.</p>
+
+        <p class="switch" id="switch" hidden>
+            <button type="button" id="intel" hidden>Got an Intel Mac?</button>
+            <button type="button" id="others">Other versions</button>
+        </p>
+
+        <div class="install-help">
+            <details data-for="windows">
+                <summary>Installing on Windows</summary>
+                <ol>
+                    <li>Unzip the whole Suede folder somewhere you like, such as Documents, and keep everything in it together.</li>
+                    <li>Double-click <strong>Suede.exe</strong>.</li>
+                    <li>Windows may say "Windows protected your PC" because Suede isn't code-signed yet. Click <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
+                    <li>Suede lives in the system tray as a little pink paw. Right-click it to open Suede or quit.</li>
+                </ol>
+            </details>
+            <details data-for="mac">
+                <summary>Installing on a Mac</summary>
+                <ol>
+                    <li>Not sure which Mac you have? Open the Apple menu, choose <strong>About This Mac</strong>, and look at <strong>Chip</strong>. "Apple M…" means Apple Silicon. "Intel" means Intel.</li>
+                    <li>Open the downloaded file and drag <strong>Suede</strong> into <strong>Applications</strong>.</li>
+                    <li>The first time, macOS may say it can't check Suede because Suede isn't notarised by Apple yet. Open <strong>System Settings</strong>, then <strong>Privacy &amp; Security</strong>, scroll down and click <strong>Open Anyway</strong> next to Suede.</li>
+                    <li>Suede lives in the menu bar as a little pink paw.</li>
+                </ol>
+            </details>
+        </div>
+        <p class="small center fine-print">Only download Suede from spypigeonstudios.com. Copies from anywhere else aren't official and may have been tampered with.</p>
+    </main>
+
+    <footer>
+        <p class="script">thanks for stopping by</p>
+        <p>Suede &copy; 2026 GKoni. All rights reserved. Made by Spy Pigeon Studios.</p>
+        <p class="small"><a href="../privacy.html">Privacy</a> · <a href="../legal.html">Legal and credits</a></p>
+    </footer>
+
+    <script src="get.js"></script>
+    <script src="../analytics.js"></script>
+</body>
+</html>
